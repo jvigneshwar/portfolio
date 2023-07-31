@@ -1,0 +1,60 @@
+#About{
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+    position: relative;
+}
+
+.about-right-shadow{
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: white;
+    font-size: large;
+    width: 3.5%;
+    height: 85%;
+    opacity: .6;
+    box-shadow: -20px 0px 17px -14px var(--primary);
+    z-index: 10;
+}
+
+.about-content{
+    height: 70%;
+    font-size: 20px;
+    width: 60%;
+    line-height: 35px;
+}
+
+.about-me{
+    margin-top: 50px;
+}
+
+
+@media (min-width: 320px) and (max-width:480px) {
+
+    #About{
+        width: 85%;
+        gap: 0px;
+        justify-content: space-between;
+    }
+    .about-right-shadow{
+        width: 10%;
+        height: 85%;
+    }
+    .about-content{
+        font-size: 17px;
+        line-height: 25px;
+        width: 80%;
+        height: 80%;
+        text-align: justify;
+        overflow-y: scroll;
+    }
+    .about-content::-webkit-scrollbar{
+        display: none;
+    }
+}

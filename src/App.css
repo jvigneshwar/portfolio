@@ -1,38 +1,49 @@
+:root {
+    --vh: 0px;
+    --primary: #E96747;
+    --filter: invert(51%) sepia(39%) saturate(1069%) hue-rotate(324deg) brightness(95%) contrast(92%);
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: var(--vh);
+    position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Sections {
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Sections::-webkit-scrollbar {
+    position: absolute;
+    left: 0;
+    width: 7px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Sections::-webkit-scrollbar-track {
+    opacity: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.Sections::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 10px 0px 0px 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Section {
+    scroll-snap-align: start;
+}
+
+.circle-drag {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
 }

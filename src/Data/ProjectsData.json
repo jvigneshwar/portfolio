@@ -1,0 +1,64 @@
+{
+    "frontend": {
+        "top-slide": [
+            "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1284736/op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png",
+            "https://s3.amazonaws.com/a.storyblok.com/f/86602/820x460/bf9aeaa0d6/front-end-designer.jpg",
+            "https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/attachemnt.png?ssl=1",
+            
+            "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1284736/op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png",
+            "https://s3.amazonaws.com/a.storyblok.com/f/86602/820x460/bf9aeaa0d6/front-end-designer.jpg",
+            "https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/attachemnt.png?ssl=1"
+
+        ],
+        "bottom-slide": [
+            "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1284736/op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png",
+            "https://s3.amazonaws.com/a.storyblok.com/f/86602/820x460/bf9aeaa0d6/front-end-designer.jpg",
+            "https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/attachemnt.png?ssl=1",
+
+            "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1284736/op-Ten-Front-End-Design-Rules-For-Developers_Luke-Social-33a3a7c9b759fdaa22973906070f8065.png",
+            "https://s3.amazonaws.com/a.storyblok.com/f/86602/820x460/bf9aeaa0d6/front-end-designer.jpg",
+            "https://i0.wp.com/css-tricks.com/wp-content/uploads/2018/06/attachemnt.png?ssl=1"
+        ],
+        "projects": [
+            {},
+            {
+                "name": "DCOLLAB",
+                "stack": "MERN",
+                "Language used": "Html, CSS,..kbhtdnfhksmdihbavbibvibvbbfbviblvawibvaiebvibviwbvvbdjairvbreiviravivneirajetnfnejnrknkndzfb/bzknbkd lnrg"
+            },
+            {
+                "name": "BLOODE",
+                "stack": "MERN",
+                "Language used": "Html, CSS, .."
+            },
+            {
+                "name": "BLOODE",
+                "stack": "MERN",
+                "Language used": "Html, CSS, .."
+            },
+            {
+                "name": "BLOODE",
+                "stack": "MERN",
+                "Language used": "Html, CSS, .."
+            },
+            {
+                "name": "BLOODE",
+                "stack": "MERN",
+                "Language used": "Html, CSS, .."
+            }
+        ]
+    },
+    "designer": {
+        "top-slide": [
+        ],
+        "bottom-slide": [
+        ],
+        "projects": [
+            {
+                "name": "",
+                "stack": "",
+                "Language used": ""
+            }
+        ]
+    }
+}

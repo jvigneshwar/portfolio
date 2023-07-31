@@ -1,0 +1,46 @@
+{
+    "frontendRole": [
+        {
+            "skill": "HTML",
+            "percentage": "90%",
+            "description" : "HTML"
+        },
+        {
+            "skill": "CSS",
+            "percentage": "90%",
+            "description" : "css"
+        },
+        {
+            "skill": "JS",
+            "percentage": "80%",
+            "description" : "Js"
+        },
+        {
+            "skill": "React",
+            "percentage": "80%",
+            "description": "React"
+        }
+    ],
+    "designer": [
+        {
+            "skill": "PhotoShop",
+            "percentage": "70%",
+            "description": "PhotoShop"
+        },
+        {
+            "skill": "Illustrator",
+            "percentage": "50%",
+            "description": "Illustrator"
+        },
+        {
+            "skill": "Figma",
+            "percentage": "10%",
+            "description": "Figma"
+        },
+        {
+            "skill": "Blender",
+            "percentage": "0%",
+            "description": "Blender"
+        }
+    ]
+}

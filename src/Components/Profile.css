@@ -1,0 +1,132 @@
+#Profile{
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 100;
+    height: 85%;
+    border-radius: 30px;
+    aspect-ratio: 16/9;
+    background-color: white;
+    display: flex;
+}
+
+.profile-cover{
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+}
+
+.back-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: var(--primary);
+    padding: 20px 10px;
+    font-size: 15px;
+    border-radius: 0px 30px 0px 30px;
+    color: white;
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+}
+
+.profile-details{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-details-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-photo{
+    width: 50%;
+    height: 100%;
+}
+
+.profile-name{
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.profile-email{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-email a,.profile-number a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.profile-email svg,.profile-number svg{
+    font-size: 1.2rem !important;
+    color: var(--primary);
+}
+
+.profile-number{
+    display: flex;
+    gap: 15px;
+}
+
+.icons{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.icons a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.icons a svg{
+    font-size: 2rem !important;
+}
+
+@media (min-width: 320px) and (max-width:480px) {
+    #Profile{
+        flex-direction: column-reverse;
+        aspect-ratio: 9/16;
+    }
+
+    .profile-details{
+        width: 100%;
+        height: 50%;
+    }
+
+    .profile-photo{
+        width: 100%;
+        height: 50%;
+    }
+
+    .profile-name{
+        font-size: 38px;
+    }
+    
+    .back-btn{
+        top: auto;
+        bottom: 0;
+        border-radius: 30px 0px 30px 0px;
+    }
+    
+}

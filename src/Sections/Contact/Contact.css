@@ -1,0 +1,141 @@
+#Contact{
+    width: 85%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-left-shadow{
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    font-size: large;
+    width: 3.5%;
+    height: 85%;
+    opacity: .6;
+    box-shadow: 20px 0px 17px -14px var(--primary);
+    z-index: 10;
+}
+
+.contact-content{
+    width: 85%;
+    height: 80%;
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.contact-me{
+    margin-top: 50px;
+}
+
+.contact-form{
+    height: 100%;
+    width: fit-content;
+    display: flex;  
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.contact-full-name{
+    width: 300px;
+    padding: 13px 15px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(244, 243, 243);
+    letter-spacing: 1.5px;  
+    border-radius: 10px;  
+}
+
+.contact-full-name:focus,.contact-email:focus,.contact-message:focus{
+    outline: none;
+    box-shadow: 0px 3px 2px -1px var(--primary);
+}
+
+
+.contact-email{
+    width: 300px;
+    padding: 13px 15px;
+    border: none;
+    background-color: rgb(244, 243, 243);
+    font-size: 15px;
+    letter-spacing: 1.5px;  
+    border-radius: 10px;  
+}
+
+.contact-message{
+    width: 300px;
+    height: 100px;
+    padding: 13px 15px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(244, 243, 243);
+    letter-spacing: 1.5px;  
+    border-radius: 10px;  
+    font-family: inherit;
+    resize: vertical;
+}
+
+.contact-submit{
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 20px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    transition: .2s;
+}
+
+.contact-submit:disabled{
+    opacity: .5;
+    background-color: var(--primary);
+    color: white;
+}
+
+.contact-submit:hover{
+    box-shadow: 4px 4px 15px 0px var(--primary);
+}
+
+.contact-image{
+    height: 100%;
+}
+
+
+@media (min-width: 320px) and (max-width:480px) {
+    #Contact{
+        width: 85%;
+        justify-content: space-between;
+    }
+    .contact-content{
+        width: 80%;
+    }
+    .contact-form {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .contact-image{
+        display: none;
+    }
+    .contact-left-shadow{
+        height: 85%;
+        width: 10%;
+    }
+    .contact-email,.contact-message,.contact-full-name{
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .contact-message{
+        height: 40%;
+    }
+}
