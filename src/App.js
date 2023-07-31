@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Nav from './Components/Nav';
 import Home from './Sections/Home/Home';
@@ -12,9 +12,13 @@ function App() {
 
   const [activePage, setAcivePage] = useState(0);
   const [showProfile, setShowProfile] = useState(false);
+  const sec = useRef();
 
   useEffect(() => {
     document.documentElement.style.setProperty('--vh', window.innerHeight + "px");
+    sec.current.style.scrollBehavior = ""
+    sec.current.scrollTop = 0
+    sec.current.style.scrollBehavior = "smooth"
   }, [])
 
   const [Role, setRole] = useState(true);
@@ -52,7 +56,7 @@ function App() {
             <Profile setShowProfile={setShowProfile}/>
           </> : <></>
       }
-      <div className='Sections' onScroll={handleScroll}>
+      <div ref={sec} className='Sections' onScroll={handleScroll}>
         <Home Role={Role} setRole={setRole} setShowProfile={setShowProfile}/>
         <Skills Role={Role} />
         <Project Role={Role} />
