@@ -10,20 +10,22 @@
 
 .about-right-shadow{
     writing-mode: vertical-lr;
+    color: var(--bw);
     text-orientation:upright;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    background-color: white;
+    background-color: transparent;
     font-size: large;
     width: 3.5%;
     height: 85%;
-    opacity: .6;
+    opacity: .7;
     box-shadow: -20px 0px 17px -14px var(--primary);
     z-index: 10;
 }
 
 .about-content{
+    color: var(--bw);
     height: 70%;
     font-size: 20px;
     width: 60%;

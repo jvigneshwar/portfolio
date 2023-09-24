@@ -20,12 +20,13 @@
 .home-left-greet {
     font-size: 52px;
     font-weight: 700;
+    color: var(--bw);
 }
 
 .home-left-name {
     font-weight: 700;
     font-size: 70px;
-    color: #E96747;
+    color: var(--primary);
 }
 
 .home-left-role {
@@ -33,6 +34,7 @@
     font-weight: 400;
     font-size: 20px;
     letter-spacing: 0.06em;
+    color: var(--bw);
 }
 
 .home-left-view-btn {
@@ -42,38 +44,45 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #E96747;
+    background-color: var(--primary);
     padding: 0px 17px;
     margin-top: 20px;
     border-radius: 30px;
     transition: .2s;
-    border: 2px solid #E96747;
+    border: 2px solid var(--primary);
 }
 
 .home-left-view-btn:hover {
-    background-color: white;
+    background-color: transparent;
+    box-shadow: 0px 0px 5px var(--primary);
+
 }
 
 .home-left-view-btn:hover p {
-    color: #E96747;
+    color: var(--primary);
 }
 
 .home-left-view-btn:hover svg {
-    color: #E96747 !important;
+    color: var(--primary) !important;
 }
 
 .home-left-view-btn p {
-    color: white;
+    color: var(--wb);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .12rem;
+}
+
+.home-left-view-btn svg {
+    color: var(--wb) !important;
 }
 
 .home-center {
     background-image: url('../../Asserts/FrontendBg.png');
     background-repeat: no-repeat;
     background-position: center;
+    position: sticky;
     min-width: 61%;
     height: 100%;
     display: flex;
@@ -82,7 +91,12 @@
     transition: 1s;
 }
 
+.home-b-d{
+    background-image: url('../../Asserts/DarkFrontendBg.png');
+}
+
 .home-center-active {
+    position: sticky;
     background-image: url('../../Asserts/DeignBg.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -94,8 +108,12 @@
     transition: 1s;
 }
 
+.home-a-d{
+    background-image: url('../../Asserts/DarkDeignBg.png');
+}
+
 .home-center-active .home-center-content {
-    box-shadow: inset 30px 30px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 30px 30px 30px 0px rgba(0, 0, 0, .3);
 }
 
 .home-center-active .home-center-content .home-circle {
@@ -111,6 +129,7 @@
 }
 
 .home-center-content {
+    position: relative;
     margin-top: 3%;
     width: 100%;
     aspect-ratio: 1.93/1;
@@ -118,14 +137,22 @@
     grid-template-columns: 1fr 1fr;
     border-radius: 500px;
     align-items: flex-end;
-    box-shadow: inset -30px 30px 40px rgba(0, 0, 0, 0.2);
-    border: 6px solid transparent;
-    background:
-        linear-gradient(104.33deg, white, white),
-        linear-gradient(104.33deg, #F6E7F8, #DFE7F2);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
+    box-shadow: inset -30px 30px 30px 0px rgba(0, 0, 0, .3);
+    margin: 8px;
+    background: linear-gradient(178deg, var(--g1) -12.75%, var(--g2) 108.03%);
     transition: 1s;
+
+}
+.home-center-content::after{
+    content: '';
+    z-index: -3;
+    position: absolute;
+    border-radius: 500px;
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    transform: translate(-7px,7px);
+    background: linear-gradient(16deg, var(--g1) 3.57%, var(--g2) 94.33%);
 }
 
 .fd-wrap {
@@ -171,20 +198,43 @@
     justify-self: center;
     transition: 1s;
     align-self: center;
-    height: 77.5%;
+    height: 80%;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: white;
     grid-column-start: 1;
     grid-row-start: 1;
-    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.25);
-    border: 6.5px solid transparent;
-    background:
-        linear-gradient(270deg, white, white),
-        linear-gradient(270deg, #F6E7F8 0%, #DFE7F2 100%);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
+    background-size: cover;
+    background: linear-gradient(116deg, var(--g1) 10.91%, var(--g2) 88%);
+    box-shadow: 10px 10px 35px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    position: relative;
+}
+
+.home-circle::after{
+    position: absolute;
+    content: '';
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1.9px solid var(--primary);
+    transform: scale(.87);
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+
+
+.home-circle::before{
+    position: absolute;
+    content: '';
+    transform-origin: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(247deg, var(--g1) 12.52%, var(--g2) 101.79%);
+    border-radius: 50%;
+    background-color: var(--primary);
+    transform: scale(.94);
 }
 
 .home-right {
@@ -220,15 +270,17 @@
 .home-right-greet {
     font-size: 52px;
     font-weight: 700;
+    color: var(--bw);
 }
 
 .home-right-name {
     font-weight: 700;
     font-size: 70px;
-    color: #7D2588;
+    color: var(--primary);
 }
 
 .home-right-role {
+    color: var(--bw);
     margin-top: 5px;
     font-weight: 400;
     font-size: 20px;
@@ -247,31 +299,36 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: #7D2588;
+    background-color: var(--primary);
     padding: 0px 17px;
     margin-top: 20px;
     border-radius: 30px;
     transition: .2s;
-    border: 2px solid #7D2588;
+    border: 2px solid var(--primary);
+}
+
+.home-right-view-btn svg{
+    color: var(--wb) !important;
 }
 
 .home-right-view-btn:hover {
-    background-color: white;
+    box-shadow: 0px 0px 5px var(--primary);
+    background-color: transparent;
 }
 
 .home-right-view-btn:hover p {
-    color: #7D2588;
+    color: var(--primary) !important;
 }
 
 .home-right-view-btn:hover svg {
-    color: #7D2588 !important;
+    color: var(--primary) !important;
 }
 
 .home-right-view-btn p {
-    color: white;
+    color: var(--wb);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: .12rem;
 }
 
@@ -296,13 +353,13 @@
         background-size: 230px;
     }
 
-    .home-center-content {
-        margin-top: 0;
-        border: 4px solid transparent;
+    .home-center-content::after{
+        padding: 5px;
+        transform: translate(-5px,5px);
     }
 
-    .home-circle {
-        border: 4px solid transparent;
+    .home-center-content {
+        margin-top: 0;
     }
 
     .home-right {
@@ -349,5 +406,9 @@
     .home-circle {
         -webkit-user-select: none;
         cursor: not-allowed;
+    }
+
+    .fd-wrap {
+        border-radius: 23vh;
     }
 }

@@ -1,13 +1,21 @@
 :root {
     --vh: 0px;
-    --primary: #E96747;
+    --primary: #F8914E;
     --filter: invert(51%) sepia(39%) saturate(1069%) hue-rotate(324deg) brightness(95%) contrast(92%);
+    --bg: white;
+    --bw: black;
+    --wb: white;
+    --g1: white
+    --g2: #dfe7f2;
+    --glow: 0px 0px 20px var(--primary);
 }
 
 .App {
     width: 100%;
     height: var(--vh);
     position: relative;
+    background: var(--bg);
+    transition: .5s;
 }
 
 .Sections {
@@ -34,6 +42,7 @@
 
 .Sections::-webkit-scrollbar-thumb {
     background-color: var(--primary);
+    box-shadow: var(--glow);
     border-radius: 10px 0px 0px 10px;
 }
 

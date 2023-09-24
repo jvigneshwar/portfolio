@@ -1,28 +1,43 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import { Icon } from '@iconify/react';
 import FrontendAvatar from "../../Asserts/FrontendAvatar.png";
 import DesignAvatar from "../../Asserts/DesignAvatar.png";
 
 
-const Home = ({ Role, setRole, setShowProfile }) => {
+const Home = ({ Role, setRole, setShowProfile, colorMode }) => {
 
-  const [divNames,setDivNames] = useState(['home-right','home-center']);
+  const [divNames, setDivNames] = useState(['home-right', 'home-center']);
   const switchRole = () => {
     setRole(!Role);
-    if(Role){
-      const newArr = [...divNames]
-      newArr[0] = 'home-right-active' 
+    const newArr = [...divNames]
+    if (Role) {
+      newArr[0] = 'home-right-active'
       newArr[1] = 'home-center-active'
-      setDivNames(newArr)
     }
-    else{
-      const newArr = [...divNames]
+    else {
       newArr[0] = 'home-right'
       newArr[1] = 'home-center'
-      setDivNames(newArr)
     }
+    setDivNames(newArr)
   }
+
+  useEffect(()=>{
+    const newArr = [...divNames]
+    if(colorMode)
+      if(Role)
+        newArr[1] = newArr[1] + ' home-b-d'
+      else
+        newArr[1] = newArr[1] + ' home-a-d'
+    else
+      if(Role)
+      newArr[1] = 'home-center'
+      else
+      newArr[1] = 'home-center-active'
+    setDivNames(newArr)
+    
+  },[colorMode,Role,divNames])
+
   return (
     <div id='Home' className='Section'>
       <div className='home-left'>
@@ -31,7 +46,7 @@ const Home = ({ Role, setRole, setShowProfile }) => {
           <div className="home-left-name">VIGNESH</div>
           <div className="home-left-role">Frontend Developer</div>
           <div className="home-left-view-link">
-            <div onClick={()=>setShowProfile(true)} className="home-left-view-btn">
+            <div onClick={() => setShowProfile(true)} className="home-left-view-btn">
               <p>VIEW PROFILE</p>
               <Icon icon="octicon:arrow-right-16" style={{ color: 'white' }} />
             </div>
@@ -57,7 +72,7 @@ const Home = ({ Role, setRole, setShowProfile }) => {
           <div className="home-right-name">VIGNESH</div>
           <div className="home-right-role">Graphic Designer</div>
           <div className="home-right-viewa-link">
-            <div onClick={()=>setShowProfile(true)} className="home-right-view-btn">
+            <div onClick={() => setShowProfile(true)} className="home-right-view-btn">
               <p>VIEW PROFILE</p>
               <Icon icon="octicon:arrow-right-16" style={{ color: 'white' }} />
             </div>

@@ -6,7 +6,9 @@ const Profile = ({ setShowProfile }) => {
     return (
         <div id="Profile">
             <div className='back-btn' onClick={() => setShowProfile(false)}>BACK</div>
-            <div className='profile-photo'></div>
+            <div className='profile-photo'>
+                <img src={require("../Asserts/IMG_20230805_221509-(1)-(1).png")} alt='profile' className='profile-photo-inner'/>
+            </div>
             <div className='profile-details'>
                 <div className='profile-details-inner'>
                     <div className='profile-name'>VIGNESHWAR J</div>

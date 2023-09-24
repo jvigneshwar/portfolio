@@ -50,7 +50,7 @@ const Contact = () => {
           <textarea name="message" onChange={(e)=>{setMessage(e.target.value)}} value={messge} type='text' className='contact-message' placeholder='Message'></textarea>
           <input type='submit' className='contact-submit' value={loading?"Loading..":"Contact"} disabled={loading }/>
         </form>
-        <img alt='contact' src={require('../../Asserts/contact.jpg')} className='contact-image'/>
+        <img alt='contact' src={require('../../Asserts/contact.png')} className='contact-image'/>
       </div>
       <Toaster/>
     </div>
