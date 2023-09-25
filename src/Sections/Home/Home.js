@@ -6,7 +6,6 @@ import DesignAvatar from "../../Asserts/DesignAvatar.png";
 
 
 const Home = ({ Role, setRole, setShowProfile, colorMode }) => {
-
   const [divNames, setDivNames] = useState(['home-right', 'home-center']);
   const switchRole = () => {
     setRole(!Role);
@@ -35,8 +34,7 @@ const Home = ({ Role, setRole, setShowProfile, colorMode }) => {
       else
       newArr[1] = 'home-center-active'
     setDivNames(newArr)
-    
-  },[colorMode,Role])
+  },[colorMode,Role,divNames])
 
   return (
     <div id='Home' className='Section'>
