@@ -36,7 +36,7 @@ const Home = ({ Role, setRole, setShowProfile, colorMode }) => {
       newArr[1] = 'home-center-active'
     setDivNames(newArr)
     
-  },[colorMode,Role,divNames])
+  },[colorMode,Role])
 
   return (
     <div id='Home' className='Section'>

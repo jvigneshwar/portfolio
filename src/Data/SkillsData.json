@@ -2,44 +2,94 @@
     "frontendRole": [
         {
             "skill": "HTML",
+            "svg": "akar-icons:html-fill",
             "percentage": "90%",
             "description" : "HTML"
         },
         {
             "skill": "CSS",
+            "svg": "akar-icons:css-fill",
             "percentage": "90%",
             "description" : "css"
         },
         {
             "skill": "JS",
-            "percentage": "80%",
+            "svg": "cib:js",
+            "percentage": "85%",
             "description" : "Js"
         },
         {
             "skill": "React",
-            "percentage": "80%",
+            "svg": "simple-icons:react",
+            "percentage": "85%",
             "description": "React"
+        },
+        {
+            "skill": "Node",
+            "svg": "fa6-brands:node",
+            "percentage": "70%",
+            "description": "Node js"
+        },
+        {
+            "skill": "Express",
+            "svg": "simple-icons:express",
+            "percentage": "70%",
+            "description": "Express js"
+        },
+        {
+            "skill": "Mongo",
+            "svg": "devicon-plain:mongodb-wordmark",
+            "percentage": "70%",
+            "description": "Mongo DB"
+        },
+        {
+            "skill": "C",
+            "svg": "devicon-plain:c",
+            "percentage": "70%",
+            "description": "C Programming"
+        },
+        {
+            "skill": "C++",
+            "svg": "file-icons:c",
+            "percentage": "70%",
+            "description": "C++ Programming"
+        },
+        {
+            "skill": "Java",
+            "svg": "devicon-plain:java-wordmark",
+            "percentage": "70%",
+            "description": "java Programming"
         }
     ],
     "designer": [
         {
             "skill": "PhotoShop",
-            "percentage": "70%",
+            "svg": "devicon-plain:photoshop",
+            "percentage": "85%",
             "description": "PhotoShop"
         },
         {
             "skill": "Illustrator",
-            "percentage": "50%",
+            "svg": "devicon-plain:illustrator",
+            "percentage": "85%",
             "description": "Illustrator"
         },
         {
+            "skill": "Indesign",
+            "svg": "file-icons:adobe-indesign",
+            "percentage": "70%",
+            "description": "Indesign"
+        },
+        {
             "skill": "Figma",
-            "percentage": "10%",
+            "svg": "teenyicons:figma-outline",
+            "percentage": "85%",
             "description": "Figma"
         },
         {
             "skill": "Blender",
-            "percentage": "0%",
+            "svg": "simple-icons:blender",
+            "percentage": "85%",
             "description": "Blender"
         }
     ]

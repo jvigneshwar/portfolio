@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Skills.css'
 import SkillsData from '../../Data/SkillsData';
 import { Icon } from '@iconify/react';
@@ -8,15 +8,22 @@ const Skills = ({ Role }) => {
   const [activeSkill, setActiveSkill] = useState(0);
   const [activeSkillPercent, setActiveSkillPercent] = useState(0);
 
+  const container = useRef();
+
+  useEffect(()=>{
+    container.current.scrollLeft = 0;
+  },[Role])
+
   useEffect(() => {
-    let arr = new Array(SkillsData.frontendRole.length)
+    let l = SkillsData[Role ? 'frontendRole' : 'designer'].length;
+    let arr = new Array(l)
     arr.fill("");
     arr[activeSkill] = "active"
     setSkillClassName(arr)
     Role ?
       setActiveSkillPercent(SkillsData.frontendRole[activeSkill].percentage)
       :
-      setActiveSkillPercent(SkillsData.designer[activeSkill].percentage)
+      setActiveSkillPercent(SkillsData.designer[activeSkill]?.percentage)
   }, [Role, activeSkill])
 
   const handleScroll = (e) => {
@@ -33,12 +40,14 @@ const Skills = ({ Role }) => {
           if (e.target.nextElementSibling)
             e.target.nextElementSibling.scrollLeft = e.target.nextElementSibling.scrollLeft - 200;
         }}><Icon icon="ep:arrow-left-bold" /></div>
-        <div className='skills-inner-container' onScroll={handleScroll}>
+        <div ref={container} className='skills-inner-container' onScroll={handleScroll}>
           {Role ?
             SkillsData.frontendRole && SkillsData.frontendRole.map((ele, ind) => {
               return (
                 <div key={ind} className={`skills-item ${skillClassName[ind]}`}>
-                  <div className='skills-inner-item'>{ele.skill}</div>
+                  <div className='skills-inner-item'>
+                    <Icon icon={ele.svg} color="var(--primary)" />
+                  </div>
                 </div>
               )
             })
@@ -46,7 +55,9 @@ const Skills = ({ Role }) => {
             SkillsData.designer && SkillsData.designer.map((ele, ind) => {
               return (
                 <div key={ind} className={`skills-item ${skillClassName[ind]}`}>
-                  <div className='skills-inner-item'>{ele.skill}</div>
+                  <div className='skills-inner-item'>
+                    <Icon icon={ele.svg} color="var(--primary)" />
+                  </div>
                 </div>
               )
             })
@@ -66,7 +77,7 @@ const Skills = ({ Role }) => {
         {Role ?
           SkillsData && SkillsData.frontendRole[activeSkill].description
           :
-          SkillsData && SkillsData.designer[activeSkill].description
+          SkillsData && SkillsData.designer[activeSkill]?.description
         }
       </pre>
     </div>
