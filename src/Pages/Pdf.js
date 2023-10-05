@@ -4,14 +4,14 @@ import ExamplePdf from "../Asserts/foss.pdf";
 const Pdf = () => {
   return (
     <div>
-        <a
+      <a
         href={ExamplePdf}
         download="Example-PDF-document"
         target="_blank"
         rel="noreferrer"
       >
-      <button>Download</button>
-    </a>
+        <button>Download</button>
+      </a>
     </div>
   )
 }

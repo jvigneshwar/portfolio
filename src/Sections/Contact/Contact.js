@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser';
 import "./Contact.css"
 import { Toaster, toast } from 'react-hot-toast';
+import ExamplePdf from "../../Asserts/foss.pdf";
 
 const Contact = () => {
   const [name,setName] = useState("");
@@ -53,6 +54,14 @@ const Contact = () => {
         <img alt='contact' src={require('../../Asserts/contact.png')} className='contact-image'/>
       </div>
       <Toaster/>
+      <a
+        href={ExamplePdf}
+        download="Example-PDF-document"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <button>Download</button>
+      </a>
     </div>
   )
 }

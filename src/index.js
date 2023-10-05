@@ -9,7 +9,7 @@ import Pdf from "./Pages/Pdf";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}/>
@@ -17,7 +17,7 @@ root.render(
         <Route path='/pdf' element={<Pdf/>} />
       </Routes>
     </BrowserRouter>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
