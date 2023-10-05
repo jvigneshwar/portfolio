@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     document.documentElement.style.setProperty('--vh', window.innerHeight + "px");
     sec.current.style.scrollBehavior = ""
-    sec.current.scrollTop = 0
+    sec.current.scrollTop = 0;
     sec.current.style.scrollBehavior = "smooth"
   }, [])
 

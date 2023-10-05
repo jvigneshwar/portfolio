@@ -30,6 +30,9 @@ const Profile = ({ setShowProfile }) => {
                         <a href='https://www.instagram.com/cgtamizhan/?next=%2F' className='insta'>
                             <Icon icon="mdi:instagram" />
                         </a>
+                        <a>
+                            <Icon icon="mdi:instagram" />
+                        </a>
                     </div>
                 </div>
             </div>
